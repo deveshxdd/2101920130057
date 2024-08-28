@@ -122,7 +122,7 @@ const App = () => {
   return (
     <>
       <h1>Top Product List</h1>
-      <h3>Sawan Singh | GL Bajaj | Github @saavanx</h3>
+      <h3> Devesh Upadhyay| GL Bajaj | Github @deveshxdd</h3>
       <div className="category-selector">
         <label>Select Category:</label>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>

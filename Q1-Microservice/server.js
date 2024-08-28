@@ -1,30 +1,30 @@
-const express = require("express"); // Importing the express module
-const axios = require("axios"); // Importing the axios module
-const cors = require("cors"); // Importing the cors module
+const express = require("express"); 
+const axios = require("axios"); 
+const cors = require("cors"); 
 
-const app = express(); // Creating an instance of the express application
-const port = 3000; // Setting the port number for the server
+const app = express(); 
+const port = 3000; 
 
-const myClientID = "insert-here"; // Client ID for authentication
-const myClientSecret = "insert-here"; // Client secret for authentication
-const testURL = "http://20.244.56.144/test"; // URL for testing
-const minPrice = 0; // Minimum price for products
+const myClientID = "insert-here"; 
+const myClientSecret = "insert-here"; 
+const testURL = "http://20.244.56.144/test"; 
+const minPrice = 0; 
 
-app.use(cors()); // Using the cors middleware for handling cross-origin requests
+app.use(cors()); 
 
-let accessToken = ""; // Variable to store the access token
-let refreshToken = ""; // Variable to store the refresh token
+let accessToken = "";
+let refreshToken = ""; 
 
-// Function to authenticate the client
+
 const authenticate = async () => {
   try {
     const response = await axios.post(`${testURL}/auth`, {
-      companyName: "sawanMart",
+      companyName: "DEVMART",
       clientID: myClientID,
       clientSecret: myClientSecret,
-      ownerName: "Sawan",
-      ownerEmail: "Sawan9793711154@gmail.com",
-      rollNo: "2001920100",
+      ownerName: "DEVESH",
+      ownerEmail: "it21151@glbitm.ac.in",
+      rollNo: "2101920130057",
     });
     accessToken = response.data.access_token; // Storing the access token
     refreshToken = response.data.refresh_token; // Storing the refresh token
