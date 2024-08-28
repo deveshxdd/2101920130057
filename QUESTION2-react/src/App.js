@@ -15,7 +15,7 @@ const App = () => {
   const fetchProductsFunction = useCallback(async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/categories/${category}/products`,
+        `http://localhost:8080/categories/${category}/products`,
         {
           params: {
             n: totalProductsPerPage * currentPage,
@@ -122,7 +122,7 @@ const App = () => {
   return (
     <>
       <h1>Top Product List</h1>
-      <h3> Devesh Upadhyay| GL Bajaj | Github @deveshxdd</h3>
+      <h3>Devesh Upadhyay | GL Bajaj | Github @deveshxdd</h3>
       <div className="category-selector">
         <label>Select Category:</label>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
